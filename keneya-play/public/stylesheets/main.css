@@ -64,7 +64,7 @@ html{
 	left: 78%;
 	width: 15%;
 	height: 10%;
-	
+
 }
 
 #map{
@@ -78,4 +78,13 @@ html{
 	position: fixed;
    bottom: 0;
 }
-
+#userdetails{
+	position:absolute;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    /*border: 1px solid #ccc;*/
+}
