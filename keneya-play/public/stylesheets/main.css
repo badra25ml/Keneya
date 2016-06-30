@@ -10,6 +10,12 @@ html{
     margin-left: 2%;
     margin-right: 2%;
 }
+/* #google_translate_element{
+	position: fixed;
+	top: 2%;
+	left: 2%;
+	height: 8%;
+} */
 #dropdown{
 	position: fixed;
 	top: 2%;
@@ -26,21 +32,21 @@ html{
 #join{
 	position: fixed;
 	top: 5%;
-	left: 21%;
+	left: 24%;
 	color: white;
 	font-weight: bold;
 }
 #aboutus{
 	position: fixed;
 	top: 4.75%;
-	left: 25%;
+	left: 30%;
 	color: white;
 	font-weight: bold;
 }
 #contactus{
 	position: fixed;
 	top: 4.75%;
-	left:31%;
+	left:37%;
 	color: white;
 	font-weight: bold;
 }

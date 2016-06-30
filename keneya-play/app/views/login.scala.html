@@ -7,16 +7,81 @@
 @(title: String)
 
 <!doctype html>
-<html>
+<html ng-app="keneya">
 <head>
-  <title>@title</title>
+   <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <title>Login</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAF8VAX0ZkbAmT2A1RcAlik2N7NzEfjqZI">
     </script>
 </head>
 <body>
+<div id="container">
+<a class="fa fa-home fa-lg" id="home">Home</a>
+  <a class="fa fa-sign-in" aria-hidden="true" id="join">Join</a>
+  <textarea id="search" placeholder="Search"></textarea>
+  <i class="fa fa-search" aria-hidden="true" id="searchicon"></i>
+  <a id="aboutus">About us</a>
+  <a id="contactus">Contact us</a>
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Select a language
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" id="dropdownmenu">
+    <li><a href="#" id="en">English</a></li>
+    <li><a href="#" id="fr">French</a></li>
+    <li><a href="#" id="ba">Bambara</a></li>
+   </ul>
+     </div>
+</div>
 
+<h3 class="text-center" ng-submit="submit">{{name | uppercase}}</h3>
+
+<div class="row text-center">
+  
+    <div class="col-xs-4 col-xs-offset-4 row-xs-4 row-xs-offset-10">
+    <form name="userForm" ng-submit="submit(user)">
+      <div class="form-group">
+        <input id="name" type="title" name="title" ng-model="user.title" class="form-control"/>
+        <label for="title">Title</label>
+        <input id="email" type="email" name="email" ng-model="user.email" class="form-control"/>
+        <label for="email">Email</label>
+        <input id="cellphone" type="cell phone" name="cell phone" ng-model="user.cell_phone" class="form-control"/>
+        <label for="cellphone">Cell Phone #</label>
+        <input id="businessphone" type="businessphone" name="business phone" ng-model="user.business_phone" class="form-control"/>
+        <label for="businessphone">Business Phone #</label>
+        <input id="stretaddress" type="address" name="address" ng-model="user.addressl" class="form-control"/>
+        <label for="streetaddress">Street Address</label>
+        <input id="city" type="city" name="city" ng-model="user.city" class="form-control"/>
+        <label for="city">City</label>
+        <input id="zip" type="zip" name="zip" ng-model="user.zip" class="form-control"/>
+        <label for="zip">Zip/ Postal code</label>
+        <input id="state" type="state" name="state" ng-model="user.state" class="form-control"/>
+        <label for="stateprovinceregion">State/ Province/ Region</label>
+        <input id="country" type="country" name="country" ng-model="user.countryl" class="form-control"/>
+        <label for="country">Country</label>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" ng-model="user.password" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success pull-left">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="map" ></div>
+   <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript" src="assets/javascripts/angular_controllers/controller.js"></script>
+<script src="assets/javascripts/languages.js"></script>
+  <script src="assets/javascripts/main.js"></script>
 </body>
 <footer id="footer">Copyright &copy Keneya Inc</footer>
 </html>
