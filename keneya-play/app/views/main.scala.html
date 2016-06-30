@@ -1,0 +1,45 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)
+
+<!doctype html>
+<html>
+<head>
+  <title>Keneya-Home-page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAF8VAX0ZkbAmT2A1RcAlik2N7NzEfjqZI">
+    </script>
+</head>
+<body>
+<div id="container">
+<a class="fa fa-home fa-lg" id="home">Home</a>
+  <a class="fa fa-sign-in" aria-hidden="true" id="join">Join</a>
+  <textarea id="search" placeholder="Search"></textarea>
+  <i class="fa fa-search" aria-hidden="true" id="searchicon"></i>
+  <a id="aboutus">About us</a>
+  <a id="contactus">Contact us</a>
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" id="dropdownmenu">
+    <li><a href="#">English</a></li>
+    <li><a href="#">French</a></li>
+    <li><a href="#">Bambara</a></li>
+   </ul>
+     </div>
+</div>
+<div id="map" ></div>
+   <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="assets/javascripts/main.js"></script>
+</body>
+<footer id="footer">Copyright &copy Keneya Inc</footer>
+</html>
