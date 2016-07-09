@@ -1,1 +1,5 @@
-home.hello= Bonjour
+home.hello= Acceuil
+home.join= Nous joindre
+home.aboutus= A propos
+home.contactus= Nous contacter
+home.language= Choisir une langue

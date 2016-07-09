@@ -12,7 +12,7 @@ GET     /aboutus                           controllers.HomeController.aboutus
 GET     /contactus                           controllers.HomeController.contactus
 
 # An example controller showing the Bambara page
-GET     /bambara                           controllers.HomeController.bambara
+#GET     /bambara                           controllers.HomeController.bambara
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
@@ -21,3 +21,8 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
+GET     /french    controllers.HomeController.changeLangfrench
+
+GET     /bambara    controllers.HomeController.changeLangbambara
+
+#POST    /   @controllers.LanguageController.changeLanguage(language: String)
