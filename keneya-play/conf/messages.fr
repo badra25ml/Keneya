@@ -2,4 +2,8 @@ home.hello= Acceuil
 home.join= Nous joindre
 home.aboutus= A propos
 home.contactus= Nous contacter
-home.language= Choisir une langue
+<<<<<<< HEAD
+home.languages= Choisir une langue
+=======
+home.languages= Choisir une langue
+>>>>>>> 89de762a002f54774dd83acde0be555d131852f1
