@@ -1,0 +1,56 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)(implicit messages: Messages)
+
+<!doctype html>
+<html>
+<head>
+  <title>Keneya-Home-page</title>
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+   <meta name=viewport content='width=800' user-scalable=no>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAF8VAX0ZkbAmT2A1RcAlik2N7NzEfjqZI">
+	
+</script>
+    
+</head>
+<body>
+ <div id="container">
+  <a href="/" class="fa fa-home fa-lg" id="home">@Messages("home.hello")</a>
+  <a href="/login" class="fa fa-sign-in" aria-hidden="true" id="join">@Messages("home.join")</a>
+  <textarea id="search" placeholder="Search"></textarea>
+  <i class="fa fa-search" aria-hidden="true" id="searchicon"></i>
+  <a href="/aboutus" id="aboutus">@Messages("home.aboutus")</a>
+  <a href="contactus" id="contactus">@Messages("home.contactus")</a>
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">@Messages("home.languages")
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" id="dropdownmenu">
+    <li><a href="/" id="en">English</a></li>
+    <li><a href="/french" id="fr">french</a></li>
+    <li><a href="/bambara" id="ba">Bambara</a></li>
+   </ul>
+   </form>
+     </div>
+ </div>
+<!--  <div id="google_translate_element"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        -->
+        
+<div id="map" ></div>
+   <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <script src="assets/javascripts/main.js"></script>
+  @content
+</body>
+<footer id="footer">Copyright &copy Keneya Inc</footer>
+</html>

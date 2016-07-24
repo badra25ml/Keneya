@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)
+@(title: String)(implicit messages: Messages)
 
 <!doctype html>
 <html ng-app="keneya">
@@ -22,19 +22,19 @@
 </head>
 <body>
 <div id="container">
-<a href="/" class="fa fa-home fa-lg" id="home">Home</a>
-  <a class="fa fa-sign-in" aria-hidden="true" id="join">Join</a>
+<a href="/" class="fa fa-home fa-lg" id="home">@Messages("home.hello")</a>
+  <a class="fa fa-sign-in" aria-hidden="true" id="join">@Messages("home.join")</a>
   <textarea id="search" placeholder="Search"></textarea>
   <i class="fa fa-search" aria-hidden="true" id="searchicon"></i>
-  <a id="aboutus">About us</a>
-  <a id="contactus">Contact us</a>
+  <a id="aboutus">@Messages("home.aboutus")</a>
+  <a id="contactus">@Messages("home.contactus")</a>
   <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Select a language
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">@Messages("home.languages")
   <span class="caret"></span></button>
   <ul class="dropdown-menu" id="dropdownmenu">
-    <li><a href="#" id="en">English</a></li>
-    <li><a href="#" id="fr">French</a></li>
-    <li><a href="#" id="ba">Bambara</a></li>
+    <li><a href="/" id="en">English</a></li>
+    <li><a href="/french" id="fr">french</a></li>
+    <li><a href="/bambara" id="ba">Bambara</a></li>
    </ul>
      </div>
 </div>
@@ -44,9 +44,9 @@
 <div class="row text-center">
   
     <div class="col-xs-4 col-xs-offset-4 row-xs-4 row-xs-offset-10">
-    <form name="userForm" ng-submit="submit(user)">
-      <div class="form-group">
-        < input id="name" type="title" name="title" ng-model="user.title" class="form-control"/>
+    <form id="form" name="userForm" ng-submit="submit(user)">
+      <div id="one" class="form-group">
+        <input id="name" type="title" name="title" ng-model="user.title" class="form-control"/>
         <label for="title">Title</label>
         <input id="email" type="email" name="email" ng-model="user.email" class="form-control"/>
         <label for="email">Email</label>
@@ -56,27 +56,31 @@
         <label for="businessphone">Business Phone #</label>
         <input id="stretaddress" type="address" name="address" ng-model="user.addressl" class="form-control"/>
         <label for="streetaddress">Street Address</label>
+       </div>
+      <div id="two" class="form-group">
         <input id="city" type="city" name="city" ng-model="user.city" class="form-control"/>
         <label for="city">City</label>
         <input id="zip" type="zip" name="zip" ng-model="user.zip" class="form-control"/>
         <label for="zip">Zip/ Postal code</label>
         <input id="state" type="state" name="state" ng-model="user.state" class="form-control"/>
         <label for="stateprovinceregion">State/ Province/ Region</label>
-        <input id="country" type="country" name="country" ng-model="user.countryl" class="form-control"/>
+        <select id="country" type="country" name="country" ng-model="user.countryl" class="form-control bfh-countries" data-country="US" data-flags="true"></select>
         <label for="country">Country</label>
-      </div>
+     
       <div class="form-group">
-        <label for="password">Password</label>
         <input id="password" type="password" name="password" ng-model="user.password" class="form-control"/>
+        <label for="password">Password</label>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-success pull-left">Submit</button>
+       </div>
+      <div id="submit" class="form-group">
+        <button type="submit" class="btn btn-success pull-center">Submit</button>
       </div>
     </form>
   </div>
 </div>
 <div id="map" ></div>
    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+   <link rel="stylesheet" type="text/css" href="assets/stylesheets/login.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script type="text/javascript" src="assets/javascripts/angular_controllers/controller.js"></script>
