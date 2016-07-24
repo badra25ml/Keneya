@@ -41,9 +41,10 @@ class HomeController @Inject()(val messagesApi: MessagesApi) extends Controller 
     Ok(views.html.index("Your new application is ready."))
   }
 
-  def login = Action {
+  def login = Action { implicit request =>
     Ok(views.html.login("Keneya Login"))
   }
+  
   def aboutus = Action {
     Ok(views.html.aboutus("keneya About us"))
   }

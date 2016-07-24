@@ -27,28 +27,28 @@
 	top: 5%;
 	left: 15%;
 	color: white;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 #join{
 	position: fixed;
 	top: 5%;
 	left: 24%;
 	color: white;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 #aboutus{
 	position: fixed;
 	top: 4.75%;
-	left: 30%;
+	left: 31.5%;
 	color: white;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 #contactus{
 	position: fixed;
 	top: 4.75%;
-	left:37%;
+	left:39%;
 	color: white;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 #search{
 	position: fixed;
